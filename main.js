@@ -2,27 +2,57 @@ let form = document.querySelector('form');
 let imageList = document.querySelector('#images');
 let previous = document.querySelector(".previous")
 let next = document.querySelector(".next")
+let search = "";
+let colorSelection ="";
 
 let currentPage = 1;
 
+previous.disabled = true;
+next.disabled = true;
 
+previous.addEventListener('click', () => {
+    currentPage--;
+    
+    loadPage();
+})
 
+next.addEventListener('click', () => {
+    currentPage++;
+    
+    loadPage();
+})
 
 
 form.onsubmit = async event => {
 
     event.preventDefault();
 
+    search = form.textsearch.value;
+    colorSelection = form.colorselect.value;
+
     loadPage();
+
+    currentPage = 1;
 }
 
 
 async function loadPage() {
-    let search = form.textsearch.value;
-    let colorSelection = form.colorselect.value;
 
-    let url = `https://pixabay.com/api/?key=33602531-81aa9b6b285c0a9184743cc53` +
-        `&q=${search}&per_page=10&page=${currentPage}`
+
+    while (imageList.firstChild) {
+        imageList.removeChild(imageList.firstChild);
+    }
+
+    let url = null;
+
+    if (colorSelection != "any") {
+        url = `https://pixabay.com/api/?key=33602531-81aa9b6b285c0a9184743cc53` +
+            `&q=${search}&per_page=10&page=${currentPage}&colors=${colorSelection}`
+    }
+    else {
+        url = `https://pixabay.com/api/?key=33602531-81aa9b6b285c0a9184743cc53` +
+            `&q=${search}&per_page=10&page=${currentPage}`
+    }
 
     let response = await fetch(url);
     let json = await response.json();
