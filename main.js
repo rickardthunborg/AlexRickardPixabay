@@ -52,5 +52,14 @@ function toggleButtons(json) {
     if (currentPage === 1) {
         previous.disabled = true;
     }
+    else{
+        previous.disabled = false;
+    }
+    if(json.hits.length < 10){
+        next.disabled = true;
+    }
+    else{
+        next.disabled = false;
+    }
 }
 
