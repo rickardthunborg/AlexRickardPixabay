@@ -23,7 +23,13 @@ h1{
     width: 300px;
   }
 
-#color-select{
+input {
+    border-radius: 25px;
+    border: 2px solid #ccc;
+    padding: 10px;
+}
+
+#colorselect{
     border-radius: 25px;
     border: 2px solid #ccc;
     padding: 10px;
