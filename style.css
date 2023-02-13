@@ -41,3 +41,16 @@ input {
     padding: 10px;
     width: 120px;
 }
+
+#page-toggler {
+    position: absolute;
+    bottom: 1em;
+    display: flex;
+    column-gap: 6em;
+}
+
+#page-toggler button {
+    border-radius: 25px;
+    border: 2px solid #ccc;
+    padding: 10px;
+}
