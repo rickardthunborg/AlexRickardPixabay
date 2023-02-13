@@ -22,11 +22,12 @@ form.onsubmit = async event => {
         let imgLink = json.hits[i].webformatURL.replace("_640", "_340");
 
         img.src = imgLink;
-        let tags = json.hits[i].tags;
-        let publisher = "taken by: " + json.hits[i].user;
+        h2.textContent = json.hits[i].tags;
+        p.textContent = "taken by: " + json.hits[i].user;
     
         li.append(img);
-        li.append(tags)
+        li.append(h2)
+        li.append(p)
         imageList.append(li);
     }
 
