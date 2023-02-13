@@ -54,9 +54,9 @@ input {
     margin: 1rem;
 }
 
+
 #images li img{
-    width: auto;
-    height: auto;
+    width: 340px;
 }
 
 #page-toggler {
