@@ -16,11 +16,17 @@ form.onsubmit = async event => {
     for (i = 0; i < 10; i++){
         let li = document.createElement('li')
         let img = document.createElement('img');
-        img.src = json.hits[i].webformatURL;
-        let tags = json.hits[i].tags
-        let publisher = json.hits[i].
+        let h2 = document.createElement('h2')
+        let p = document.createElement('p')
+
+        let imgLink = json.hits[i].webformatURL.replace("_640", "_340");
+
+        img.src = imgLink;
+        let tags = json.hits[i].tags;
+        let publisher = "taken by: " + json.hits[i].user;
     
         li.append(img);
+        li.append(tags)
         imageList.append(li);
     }
 
