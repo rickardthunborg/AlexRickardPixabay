@@ -42,6 +42,23 @@ input {
     width: 120px;
 }
 
+#images{
+    display: flex;
+    flex-direction: row;
+    width: 1500px;
+    flex-wrap: wrap;
+}
+
+#images li{
+    list-style: none;
+    margin: 1rem;
+}
+
+#images li img{
+    width: auto;
+    height: auto;
+}
+
 #page-toggler {
     position: absolute;
     bottom: 1em;
