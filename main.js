@@ -32,9 +32,16 @@ form.onsubmit = async event => {
         li.append(p)
         imageList.append(li);
     }
+
+    toggleButtons(json);
 }
 
 function toggleButtons(json) {
+    let previous = document.querySelector(".previous");
+    let next = document.querySelector(".next");
 
+    if (currentPage === 1) {
+        previous.disabled = true;
+    }
 }
 
