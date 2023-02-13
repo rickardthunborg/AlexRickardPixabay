@@ -1,11 +1,23 @@
 let form = document.querySelector('form');
 let imageList = document.querySelector('#images');
+let previous = document.querySelector(".previous")
+let next = document.querySelector(".next")
+
 let currentPage = 1;
+
+
+
+
 
 form.onsubmit = async event => {
 
     event.preventDefault();
 
+    loadPage();
+}
+
+
+async function loadPage() {
     let search = form.textsearch.value;
     let colorSelection = form.colorselect.value;
 
@@ -34,12 +46,9 @@ form.onsubmit = async event => {
     }
 
     toggleButtons(json);
-}
+} 
 
 function toggleButtons(json) {
-    let previous = document.querySelector(".previous");
-    let next = document.querySelector(".next");
-
     if (currentPage === 1) {
         previous.disabled = true;
     }
