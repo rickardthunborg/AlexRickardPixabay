@@ -60,6 +60,7 @@ async function loadPage() {
     for (i = 0; i < json.hits.length; i++) {
         let li = document.createElement('li')
         let img = document.createElement('img');
+        let imgDiv = document.createElement('div')
         let h2 = document.createElement('h2')
         let p = document.createElement('p')
 
@@ -69,7 +70,9 @@ async function loadPage() {
         h2.textContent = json.hits[i].tags;
         p.textContent = "taken by: " + json.hits[i].user;
 
-        li.append(img);
+        imgDiv.append(img);
+
+        li.append(imgDiv);
         li.append(h2)
         li.append(p)
         imageList.append(li);
