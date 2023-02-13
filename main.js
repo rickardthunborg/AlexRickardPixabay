@@ -13,12 +13,17 @@ form.onsubmit = async event => {
     let response = await fetch(url);
     let json = await response.json();
 
-    let li = document.createElement('li')
-    let img = document.createElement('img');
-    img.src = json.hits[0].webformatURL;
+    for (i = 0; i < 10; i++){
+        let li = document.createElement('li')
+        let img = document.createElement('img');
+        img.src = json.hits[i].webformatURL;
+        let tags = json.hits[i].tags
+        let publisher = json.hits[i].
+    
+        li.append(img);
+        imageList.append(li);
+    }
 
-    li.append(img);
 
-    imageList.append(li);
 
 }
