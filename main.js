@@ -14,12 +14,24 @@ previous.addEventListener('click', () => {
     currentPage--;
     
     loadPage();
-})
+
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  });
 
 next.addEventListener('click', () => {
     currentPage++;
     
     loadPage();
+
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
 })
 
 
@@ -27,7 +39,7 @@ form.onsubmit = async event => {
 
     event.preventDefault();
 
-    search = form.textsearch.value;
+    search = form.textsearch.value.replace(" ","+");
     colorSelection = form.colorselect.value;
 
     loadPage();

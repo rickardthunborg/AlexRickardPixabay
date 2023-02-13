@@ -5,8 +5,8 @@ body{
     background-image: url(background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100%;
-    justify-content: center;
+    background-color: #362a14;
+    height: 100vh;
 }
 
 h1{
@@ -14,16 +14,9 @@ h1{
     font-size: 50px;
     color: white;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-
 }
 
-#input-field {
-    border-radius: 25px;
-    border: 2px solid #ccc;
-    padding: 10px;
-    font-size: 16px;
-    width: 300px;
-  }
+
 
 input {
     border-radius: 25px;
@@ -35,6 +28,7 @@ input {
     border-radius: 25px;
     border: 2px solid #ccc;
     padding: 10px;
+    transition: transform 300ms ease, background 250ms ease;
 }
 
 #submitter {
@@ -42,6 +36,12 @@ input {
     border: 2px solid #ccc;
     padding: 10px;
     width: 120px;
+    transition: transform 300ms ease, background 300ms ease;
+}
+
+#submitter:hover {
+    transform: translateY(-0.25em);
+    background-color: #fbe182;
 }
 
 #images{
@@ -78,6 +78,10 @@ li div {
 
 }
 
+li h2{
+    font-family: sans-serif;
+    max-width: 300px;
+}
 
 
 #pages button{
@@ -94,5 +98,16 @@ li div {
         margin: auto;
         align-items: center;
     }
+
+    input {
+        width: 6em;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 35px;
+        margin-top: 5rem;
+    }        
 }
 
