@@ -52,6 +52,8 @@ input {
 #images li{
     list-style: none;
     margin: 1rem;
+    text-align: center;
+    color: white;
 }
 
 
@@ -59,15 +61,12 @@ input {
     width: 340px;
 }
 
-#page-toggler {
-    position: absolute;
-    bottom: 1em;
-    display: flex;
-    column-gap: 6em;
-}
 
-#page-toggler button {
+#pages button{
+    display: inline-block;
+    margin: 1rem;
     border-radius: 25px;
     border: 2px solid #ccc;
     padding: 10px;
 }
+
