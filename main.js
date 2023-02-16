@@ -15,11 +15,7 @@ previous.addEventListener('click', () => {
     
     loadPage();
 
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    });
+    window.scrollTo({top: 0});
   });
 
 next.addEventListener('click', () => {
@@ -27,11 +23,7 @@ next.addEventListener('click', () => {
     
     loadPage();
 
-    window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'smooth'
-      });
+    window.scrollTo({top: 0});
 })
 
 
