@@ -6,6 +6,7 @@ let search = "";
 let colorSelection ="";
 
 let currentPage = 1;
+let totalPages = null;
 
 previous.disabled = true;
 next.disabled = true;
@@ -92,7 +93,7 @@ function toggleButtons(json) {
     else{
         previous.disabled = false;
     }
-    if(json.hits.length < 10){
+    if(currentPage >= (json.totalHits) / 10){
         next.disabled = true;
     }
     else{
