@@ -1,4 +1,4 @@
-body{
+body {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,7 +9,7 @@ body{
     height: 100vh;
 }
 
-h1{
+h1 {
     margin-top: 10rem;
     font-size: 50px;
     color: white;
@@ -24,7 +24,7 @@ input {
     padding: 10px;
 }
 
-#colorselect{
+#colorselect {
     border-radius: 25px;
     border: 2px solid #ccc;
     padding: 10px;
@@ -44,24 +44,24 @@ input {
     background-color: #fbe182;
 }
 
-#images{
+#images {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    
+
     max-width: 1500px;
     flex-wrap: wrap;
     padding: 0;
     margin: auto;
 }
 
-#images li{
+#images li {
     list-style: none;
     margin: 1rem;
     text-align: center;
     color: white;
-    
+
 }
 
 li div {
@@ -70,7 +70,7 @@ li div {
     overflow: hidden;
 }
 
-#images li img{
+#images li img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -78,13 +78,13 @@ li div {
 
 }
 
-li h2{
+li h2 {
     font-family: sans-serif;
     max-width: 300px;
 }
 
 
-#pages button{
+#pages button {
     display: inline-block;
     margin: 1rem;
     border-radius: 25px;
@@ -92,8 +92,8 @@ li h2{
     padding: 10px;
 }
 
-@media(max-width: 1200px){
-    #images{
+@media(max-width: 1200px) {
+    #images {
         width: 100%;
         margin: auto;
         align-items: center;
@@ -108,6 +108,5 @@ li h2{
     h1 {
         font-size: 35px;
         margin-top: 5rem;
-    }        
+    }
 }
-

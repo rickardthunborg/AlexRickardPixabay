@@ -3,7 +3,7 @@ let imageList = document.querySelector('#images');
 let previous = document.querySelector(".previous")
 let next = document.querySelector(".next")
 let search = "";
-let colorSelection ="";
+let colorSelection = "";
 
 let currentPage = 1;
 
@@ -12,26 +12,26 @@ next.disabled = true;
 
 previous.addEventListener('click', () => {
     currentPage--;
-    
-    loadPage();
 
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    });
-  });
-
-next.addEventListener('click', () => {
-    currentPage++;
-    
     loadPage();
 
     window.scrollTo({
         top: 0,
         left: 0,
         behavior: 'smooth'
-      });
+    });
+});
+
+next.addEventListener('click', () => {
+    currentPage++;
+
+    loadPage();
+
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+    });
 })
 
 
@@ -39,7 +39,7 @@ form.onsubmit = async event => {
 
     event.preventDefault();
 
-    search = form.textsearch.value.replace(" ","+");
+    search = form.textsearch.value.replace(" ", "+");
     colorSelection = form.colorselect.value;
 
     loadPage();
@@ -91,19 +91,19 @@ async function loadPage() {
     }
 
     toggleButtons(json);
-} 
+}
 
 function toggleButtons(json) {
     if (currentPage === 1) {
         previous.disabled = true;
     }
-    else{
+    else {
         previous.disabled = false;
     }
-    if(json.hits.length < 10){
+    if (json.hits.length < 10) {
         next.disabled = true;
     }
-    else{
+    else {
         next.disabled = false;
     }
 }
