@@ -58,11 +58,11 @@ async function loadPage() {
 
     if (colorSelection != "any") {
         url = `https://pixabay.com/api/?key=33602531-81aa9b6b285c0a9184743cc53` +
-            `&q=${search}&per_page=10&page=${currentPage}&colors=${colorSelection}`
+            `&q=${search}&per_page=12&page=${currentPage}&colors=${colorSelection}`
     }
     else {
         url = `https://pixabay.com/api/?key=33602531-81aa9b6b285c0a9184743cc53` +
-            `&q=${search}&per_page=10&page=${currentPage}`
+            `&q=${search}&per_page=12&page=${currentPage}`
     }
 
     let response = await fetch(url);
