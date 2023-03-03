@@ -6,8 +6,16 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #010000;
+    font-family: 'Raleway', sans-serif;
     height: 100vh;
 }
+
+input[type="text"], #colorselect, #submitter, .previous, .next
+{
+    font-family: 'Raleway', sans-serif;
+
+}
+
 
 h1 {
     margin-top: 10rem;
@@ -83,7 +91,6 @@ li div {
 }
 
 li h2 {
-    font-family: sans-serif;
     max-width: 300px;
 }
 
