@@ -189,9 +189,30 @@ li h2 {
     }
 }
 
+@media (max-width: 800px){
+    h1 {
+        font-size: 35px;
+        margin-top: 5rem;
+    }
+
+
+
+}
+
+
 @media (max-width: 600px) {
     h1 {
         font-size: 35px;
+        margin-top: 5rem;
+    }
+    #search-section > form > input[type=text]{
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 400px){
+    h1 {
+        font-size: 25px;
         margin-top: 5rem;
     }
 }
