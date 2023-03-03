@@ -28,12 +28,28 @@ h1 {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
+form{
 
+    display: flex;
+    flex-wrap: wrap;
+    width: 640px;
+    justify-content: center;
+    gap: 5px;
+}
 
-input {
+input[type=text]{
+    padding-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-image: url(49116.png);
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    width: 400px;
+    font-size: 25px;
     border-radius: 25px;
     border: 2px solid #ccc;
-    padding: 10px;
+ 
 }
 
 #colorselect {
@@ -42,6 +58,60 @@ input {
     padding: 10px;
     transition: transform 300ms ease, background 250ms ease;
 }
+
+option:hover{
+    background-color: black;
+}
+
+#colorselect option[value="any"] {
+    background-color: white; /* set the background color for the "Any Color" option */
+  }
+  
+  #colorselect option[value="red"] {
+    background-color: red;
+    color: var(--color)
+
+  }
+  
+  #colorselect option[value="orange"] {
+    background-color: orange;
+  }
+  
+  #colorselect option[value="yellow"] {
+    background-color: yellow;
+  }
+  
+  #colorselect option[value="green"] {
+    background-color: green;
+  }
+  
+  #colorselect option[value="blue"] {
+    background-color: blue;
+  }
+  
+  #colorselect option[value="purple"] {
+    background-color: purple;
+  }
+  
+  #colorselect option[value="pink"] {
+    background-color: pink;
+  }
+  
+  #colorselect option[value="brown"] {
+    background-color: brown;
+  }
+  
+  #colorselect option[value="gray"] {
+    background-color: gray;
+  }
+  
+  #colorselect option[value="black"] {
+    background-color: black;
+  }
+  
+  #colorselect option[value="white"] {
+    background-color: white;
+  }
 
 #submitter {
     border-radius: 25px;

@@ -3,6 +3,7 @@ let imageList = document.querySelector('#images');
 let previous = document.querySelector("#previous")
 let next = document.querySelector("#next")
 let search = "";
+let colorSelect = document.querySelector('#colorselect');
 let colorSelection ="";
 
 let currentPage = 1;
@@ -25,6 +26,16 @@ next.addEventListener('click', () => {
     loadPage();
 
     window.scrollTo({top: 0});
+})
+
+colorSelect.addEventListener('change', () => {
+
+  const selectedColor = colorSelect.value;
+  const colorOption = colorSelect.options[colorSelect.selectedIndex];
+  const colorOptionColor = colorOption.style.backgroundColor;
+  colorSelect.style.backgroundColor = selectedColor !== 'any' ? selectedColor : 'gray';
+  colorSelect.style.color = selectedColor !== 'any' ? 'white' : 'black';
+    
 })
 
 
@@ -51,8 +62,8 @@ async function loadPage() {
         imageList.removeChild(imageList.firstChild);
     }
 
-    previous.classList.remove("hidden")
-    next.classList.remove("hidden")
+    previous.classList.add("hidden")
+    next.classList.add("hidden")
 
     let url = null;
 
@@ -87,7 +98,12 @@ async function loadPage() {
         li.append(h2)
         li.append(p)
         imageList.append(li);
+
+        
     }
+
+    previous.classList.remove("hidden")
+    next.classList.remove("hidden")
 
     toggleButtons(json);
 } 
