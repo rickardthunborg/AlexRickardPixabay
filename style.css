@@ -44,21 +44,26 @@ input {
     background-color: #fbe182;
 }
 
+    
+
 #images {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 
-    max-width: 1500px;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    max-width: 1100px;
     flex-wrap: wrap;
     padding: 0;
     margin: auto;
+    margin-top: 5rem;;
 }
 
 #images li {
     list-style: none;
-    margin: 1rem;
+    margin: 2rem;
     text-align: center;
     color: white;
 
@@ -67,8 +72,7 @@ input {
 li div {
     width: 300px;
     height: 300px;
-    overflow: hidden;
-}
+    overflow: hidden;}
 
 #images li img {
     width: 100%;
