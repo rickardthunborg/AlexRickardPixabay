@@ -10,10 +10,14 @@ body {
     height: 100vh;
 }
 
-input[type="text"], #colorselect, #submitter, .previous, .next
+input[type="text"], #colorselect, #submitter, #previous, #next
 {
     font-family: 'Raleway', sans-serif;
 
+}
+
+.hidden{
+    visibility: hidden;
 }
 
 
@@ -52,7 +56,7 @@ input {
     background-color: #fbe182;
 }
 
-    
+
 
 #images {
     display: flex;

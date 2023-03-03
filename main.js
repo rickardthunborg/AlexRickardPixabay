@@ -1,7 +1,7 @@
 let form = document.querySelector('form');
 let imageList = document.querySelector('#images');
-let previous = document.querySelector(".previous")
-let next = document.querySelector(".next")
+let previous = document.querySelector("#previous")
+let next = document.querySelector("#next")
 let search = "";
 let colorSelection ="";
 
@@ -36,6 +36,9 @@ form.onsubmit = async event => {
     colorSelection = form.colorselect.value;
 
     loadPage();
+    
+
+    
 
     currentPage = 1;
 }
@@ -47,6 +50,9 @@ async function loadPage() {
     while (imageList.firstChild) {
         imageList.removeChild(imageList.firstChild);
     }
+
+    previous.classList.remove("hidden")
+    next.classList.remove("hidden")
 
     let url = null;
 
