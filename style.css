@@ -23,7 +23,7 @@ input[type="text"], #colorselect, #submitter, #previous, #next
 
 h1 {
     margin-top: 10rem;
-    font-size: 50px;
+    font-size: 75px;
     color: white;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
