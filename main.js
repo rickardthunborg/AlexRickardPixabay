@@ -101,8 +101,11 @@ async function loadPage() {
         
     }
 
-    previous.classList.remove("hidden")
-    next.classList.remove("hidden")
+    if(json.hits.length > 0){
+        previous.classList.remove("hidden")
+        next.classList.remove("hidden")
+    }
+    
 
     toggleButtons(json);
 } 
