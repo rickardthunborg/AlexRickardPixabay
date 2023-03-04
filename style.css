@@ -50,14 +50,17 @@ input[type=text]{
     font-size: 25px;
     border-radius: 25px;
     border: 2px solid #ccc;
+    
  
 }
 
+input:focus {
+    outline: none;
+  }
+
+
+
 #colorselect {
-    appearance: none;
-    background-image: url('data:image/svg+xml;utf8,<svg fill="%23ffffff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
-    background-position: right center;
-    background-repeat: no-repeat;
     background-size: 20px 20px;
 
 
@@ -66,9 +69,15 @@ input[type=text]{
     padding: 10px;
 }
 
-option:hover{
-    background-color: white;
-}
+#colorselect:focus {
+    outline: none;
+
+  }
+
+#colorselect:hover option:hover {
+    background-color: #fff;
+  }
+  
 
 #colorselect option[value="any"] {
     background-color: white; /* set the background color for the "Any Color" option */
@@ -183,6 +192,9 @@ li h2 {
     border: 2px solid #ccc;
     padding: 10px;
 }
+
+
+
 
 @media(max-width: 1200px) {
     #images {

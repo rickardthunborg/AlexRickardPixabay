@@ -34,8 +34,7 @@ colorSelect.addEventListener('change', () => {
   const colorOption = colorSelect.options[colorSelect.selectedIndex];
   const colorOptionColor = colorOption.style.backgroundColor;
   colorSelect.style.backgroundColor = selectedColor !== 'any' ? selectedColor : 'gray';
-  colorSelect.style.color = selectedColor !== 'any' ? 'white' : 'black';
-    
+  colorSelect.style.color = selectedColor !== 'any' ? (selectedColor === 'white' ? 'black' : 'white') : 'black';
 })
 
 
